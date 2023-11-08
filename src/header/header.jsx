@@ -18,7 +18,7 @@ import {
 
 export default () => {
     return (
-        <Box bg={'white'} h={'200px'} as="header" w={'100%'}>
+        <Box bg={'#f9f9f9'} h={'200px'} as="header" w={'100%'}>
             <Flex
                 color={'#4B4B4B'}
                 alignItems={'center'}
@@ -74,8 +74,8 @@ export default () => {
                 <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>Радиаторы</Text>
                 <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>Полотенцесушители</Text>
                 <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>конвекторы</Text>
-                <Link display={'none'} id="links" to={'/'}>home</Link>
-                <Link display={'none'} id="links" to={'/page2'}>katalog</Link>
+                <Link display={'none'} id="links" to={'/'}>HOME</Link>
+                <Link display={'none'} id="links" to={'/page2'}>KATALOGS</Link>
                 <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>бренды</Text>
                 <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>доставка и оплата</Text>
                 <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>О нас</Text>

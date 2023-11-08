@@ -17,22 +17,22 @@ export default class SimpleSlider extends Component {
         return (
             <Box>
                 <Slider {...settings}>
-                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px'}} bg={'violet'}>
+                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px',md:'260px',lg:'280px', xl:'300px'}} bg={'violet'}>
                         <Heading>Banner1</Heading>
                     </Box>
-                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px'}} bg={'violet'}>
+                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px',md:'260px',lg:'280px', xl:'300px'}} bg={'violet'}>
                         <Heading>Banner2</Heading>
                     </Box>
-                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px'}} bg={'violet'}>
+                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px',md:'260px',lg:'280px', xl:'300px'}} bg={'violet'}>
                         <Heading>Banner3</Heading>
                     </Box>
-                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px'}} bg={'violet'}>
+                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px',md:'260px',lg:'280px', xl:'300px'}} bg={'violet'}>
                         <Heading>Banner4</Heading>
                     </Box>
-                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px'}} bg={'violet'}>
+                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px',md:'260px',lg:'280px', xl:'300px'}} bg={'violet'}>
                         <Heading>Banner5</Heading>
                     </Box>
-                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px'}} bg={'violet'}>
+                    <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px',md:'260px',lg:'280px', xl:'300px'}} bg={'violet'}>
                         <Heading>Banner6</Heading>
                     </Box>
                 </Slider>
