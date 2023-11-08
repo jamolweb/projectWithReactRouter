@@ -15,11 +15,7 @@ export default class SimpleSlider extends Component {
             slidesToScroll: 1
         };
         return (
-            <Box
-                w={{ base: '98%', md: '95%', xl: '93%', '2xl': '90%' }}
-                m={'0 auto'}
-                justifyContent={'center'}
-            >
+            <Box>
                 <Slider {...settings}>
                     <Box textAlign={'center'} padding={{base:'80px',sm:'100px'}} w={'100%'} h={{base:'200px', sm:'230px'}} bg={'violet'}>
                         <Heading>Banner1</Heading>

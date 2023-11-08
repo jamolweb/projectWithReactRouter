@@ -24,7 +24,6 @@ export default () => {
                 alignItems={'center'}
                 justifyContent={'space-between'}
                 py={'20px'}
-                w={{ base: '98%', md: '95%', xl: '93%', '2xl': '90%' }}
                 m={'0 auto'}>
                 <Heading fontSize={{ base: '23px', sm: '23px', md: '26px', lg: '28px', xl: '32px', '2xl': '35px' }}>
                     CompanyName
@@ -63,7 +62,6 @@ export default () => {
                 alignItems={'center'}
                 justifyContent={'space-between'}
                 py={'20px'}
-                w={{ base: '98%', md: '95%', xl: '93%', '2xl': '90%' }}
                 m={'0 auto'}
             >
                 <Burger />
