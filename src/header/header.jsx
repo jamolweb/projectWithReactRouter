@@ -13,7 +13,7 @@ import { GrLocation } from 'react-icons/gr'
 import { AiOutlineSearch } from 'react-icons/ai'
 import Burger from './Burger.jsx'
 import {
-    Link
+    Link, NavLink
 } from 'react-router-dom'
 
 export default () => {
@@ -60,26 +60,16 @@ export default () => {
             <Flex
                 color={'#4B4B4B'}
                 alignItems={'center'}
-                justifyContent={'space-between'}
+                gap={'20px'}
                 py={'20px'}
                 m={'0 auto'}
             >
-                <Burger />
-                <InputGroup display={{ base: 'flex', md: 'none' }} w={{ base: '200px', sm: '240px', md: '290px', lg: '300px' }}>
-                    <Input placeholder="Поиск " />
-                    <InputRightElement>
-                        <AiOutlineSearch fontSize={'20px'} />
-                    </InputRightElement>
-                </InputGroup>
-                <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>Радиаторы</Text>
-                <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>Полотенцесушители</Text>
-                <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>конвекторы</Text>
-                <Link display={'none'} id="links" to={'/'}>HOME</Link>
-                <Link display={'none'} id="links" to={'/page2'}>KATALOGS</Link>
-                <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>бренды</Text>
-                <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>доставка и оплата</Text>
-                <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>О нас</Text>
-                <Text fontSize={{ base: '13px', sm: '14px', md: '15px'}} display={{base:'none', md:'flex'}}>контакты</Text>
+                <NavLink to={'/'} style={({isActive})=>{
+                    return isActive ? {color:'blue', fontWeight:'900px', borderBottom:'2px solid blue'} : {}
+                }}>HOME</NavLink>
+                <NavLink to={'/page2'} style={({isActive})=>{
+                    return isActive ? {color:'blue', fontWeight:'900px', borderBottom:'2px solid blue'} : {}
+                }}>KATALOGS</NavLink>
             </Flex>
         </Box>
     )

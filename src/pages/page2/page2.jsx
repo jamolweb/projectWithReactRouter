@@ -3,8 +3,6 @@ import {
   Flex,
   Heading
 } from "@chakra-ui/react";
-import Footer from "../../footer";
-import Header from "../../header/header";
 import Sidebar from "./sidebar";
 import SidebarBurger from './sidebarBurger'
 import Cards from "./cards";

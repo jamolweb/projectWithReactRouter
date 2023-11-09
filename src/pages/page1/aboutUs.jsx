@@ -15,7 +15,7 @@ const aboutUs = () => {
             <Grid mt={'40px'} gap={'30px'} templateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(2,1fr)' }}>
                 <GridItem display={'flex'} flexDirection={'column'} maxW={'90%'} gap={'20px'}>
                     <Text>
-                        Компания <Text display={'inline'} color={'green'}>«Теплый Поток»</Text> внимательно следит за мировыми технологическими
+                        Компания Теплый Поток» внимательно следит за мировыми технологическими
                         новинками и современными тенденциями в дизайне приборов отопления.
                     </Text>
                     <Text>

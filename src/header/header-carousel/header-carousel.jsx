@@ -9,6 +9,7 @@ import Banner from './banner1.png'
 export default class SimpleSlider extends Component {
     render() {
         const settings = {
+            arrow:false,
             dots: true,
             infinite: true,
             speed: 550,

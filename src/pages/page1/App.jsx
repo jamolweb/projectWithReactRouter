@@ -3,11 +3,9 @@ import {
   Heading
 } from '@chakra-ui/react'
 import Header from '../../header/header'
-// import Corausel from './corausel'
 import Katalog from './katalog'
 import WeWorkWith from './card2'
 import AboutUs from './aboutUs'
-import Footer from '../../footer'
 
 function App() {
 
