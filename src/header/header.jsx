@@ -15,8 +15,16 @@ import Burger from './Burger.jsx'
 import {
     Link, NavLink
 } from 'react-router-dom'
+import { useState } from "react"
+import { Products } from "../context/CartProducts.jsx"
+import { useContext } from "react"
+
 
 export default () => {
+    let [state, setState] = useState('')
+
+    const { Product } = useContext(Products);
+
     return (
         <Box bg={'#f9f9f9'} h={'200px'} as="header" w={'100%'}>
             <Flex
@@ -46,15 +54,13 @@ export default () => {
                     </Flex>
                 </Flex>
                 <Flex gap={'35px'}>
-                    <InputGroup display={{ base: 'none', md: 'flex' }} w={{ base: '200px', sm: '240px', md: '290px', lg: '300px' }}>
+                    <InputGroup  display={{ base: 'none', md: 'flex' }} w={{ base: '200px', sm: '240px', md: '290px', lg: '300px' }}>
                         <Input  placeholder="Поиск " />
                         <InputRightElement>
                             <AiOutlineSearch fontSize={'20px'} />
                         </InputRightElement>
                     </InputGroup>
-                    <Button w={{ base: '150px', sm: '150px', md: '150px', lg: '200px' }} bg={'green'}>
-                        Заказать расчет
-                    </Button>
+                    <NavLink to={'/mycart'} style={{marginTop:'10px', color:'green', fontWeight:'900'}} >My Cart {Product.lentgh}</NavLink>
                 </Flex>
             </Flex>
             <Flex

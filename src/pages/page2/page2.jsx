@@ -5,7 +5,7 @@ import {
 } from "@chakra-ui/react";
 import Sidebar from "./sidebar";
 import SidebarBurger from './sidebarBurger'
-import Cards from "./cards";
+import Products from "./page2Products";
 
 const Contact = () => {
   return (
@@ -23,7 +23,7 @@ const Contact = () => {
         </Flex>
         <Flex mt={'40px'}>
           <Sidebar />
-          <Cards />
+          <Products />
         </Flex>
     </>
   )

@@ -17,14 +17,16 @@ const SinglePage = () => {
   let [state, setState] = useState([])
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/photos/${params.id}`)
+      .get(`https://dummyjson.com/products/${params.id}`)
       .then((res) => setState(res.data))
   }, [params.id]);
 
+
+
   return (
-    <Grid rowGap={'40px'} templateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }} >
+    <Grid rowGap={'40px'} templateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}>
       <GridItem>
-        <Image w={{base:'100%', md:'80%'}} h={'auto'} minH={'300px'} src={state.url} />
+        <Image w={{base:'100%', md:'80%'}} h={'auto'} minH={'300px'} src={state.thumbnail} />
       </GridItem>
       <GridItem display={'flex'} flexDirection={'column'} >
         <Heading fontSize={{ base: '17px', sm: '19px', md: '21px', lg: '23px', xl: '25px', '2xl': '27px' }}>{state.title}</Heading>
@@ -32,31 +34,27 @@ const SinglePage = () => {
         <Heading mt={"10px"} size={'sm'}>Harakteristika</Heading>
         <Box mt={'5px'}>
           <Flex w={'250px'} justifyContent={'space-between'}>
-            <Text>Площадь:</Text>
-            <Text>до 50 м2</Text>
+            <Text>rating</Text>
+            <Text>{state.rating}</Text>
           </Flex>
           <Flex w={'250px'} justifyContent={'space-between'}>
-            <Text>Площадь:</Text>
-            <Text>до 50 м2</Text>
+            <Text>discountPercentage</Text>
+            <Text>{state.discountPercentage}</Text>
           </Flex>
           <Flex w={'250px'} justifyContent={'space-between'}>
-            <Text>Площадь:</Text>
-            <Text>до 50 м2</Text>
+            <Text>stock</Text>
+            <Text>{state.stock}</Text>
           </Flex>
           <Flex w={'250px'} justifyContent={'space-between'}>
-            <Text>Площадь:</Text>
-            <Text>до 50 м2</Text>
+            <Text>brand</Text>
+            <Text>{state.brand}</Text>
           </Flex>
           <Flex w={'250px'} justifyContent={'space-between'}>
-            <Text>Площадь:</Text>
-            <Text>до 50 м2</Text>
-          </Flex>
-          <Flex w={'250px'} justifyContent={'space-between'}>
-            <Text>Площадь:</Text>
-            <Text>до 50 м2</Text>
+            <Text>category</Text>
+            <Text>{state.category}</Text>
           </Flex>
         </Box>
-        <Heading mt={'20px'} >10 999 ₽</Heading>
+        <Heading mt={'20px'} > ${state.price}</Heading>
         <Button mt={'20px'} w={'240px'} colorScheme='facebook'>Kupit</Button>
       </GridItem>
     </Grid>

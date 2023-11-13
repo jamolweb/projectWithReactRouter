@@ -5,14 +5,17 @@ import App from './pages/page1/App.jsx'
 import Page2 from "./pages/page2/page2.jsx";
 import { Box, ChakraProvider } from '@chakra-ui/react'
 import Routers from "./routes/Routes.jsx";
+import Context from "./context/CartProducts.jsx";
 
 export default function Main() {
   return (
 
     <ChakraProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Context>
           <Routers />
-        </BrowserRouter>
+        </Context>
+      </BrowserRouter>
     </ChakraProvider>
   );
 }
