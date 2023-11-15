@@ -29,7 +29,7 @@ const Cart = () => {
     let [count, setCount] = useState(arr)
 
     const decCrease = (id) => {
-        let ttt = count.map(elem => {
+        let newCount = count.map(elem => {
             if (elem.id === id) {
                 return {
                     ...elem,
@@ -38,10 +38,10 @@ const Cart = () => {
             }
             return elem;
         })
-        setCount(ttt);
+        setCount(newCount);
     }
     const inCrease = (id) => {
-        let ttt = count.map(elem => {
+        let newCount = count.map(elem => {
             if (elem.id === id && elem.count > 1) {
                 return {
                     ...elem,
@@ -50,7 +50,7 @@ const Cart = () => {
             }
             return elem;
         })
-        setCount(ttt);
+        setCount(newCount);
     }
 
     let totalPrice = 0;

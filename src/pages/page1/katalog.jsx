@@ -37,8 +37,8 @@ const Katalog = () => {
     let navigate = useNavigate('')
     return (
         <Box mt={'50px'}>
-            <Heading>Каталогu</Heading>
-            <Grid ml={'30px'} gap={'10px'} templateColumns={{ base: 'repeat(1,1fr)', sm: 'repeat(2,1fr)', md: 'repeat(3,1fr)', lg: 'repeat(4,1fr)', }}>
+            <Heading ml={'10px'}>Каталогu</Heading>
+            <Grid gap={'10px'} templateColumns={{ base: 'repeat(1,1fr)', sm: 'repeat(2,1fr)', md: 'repeat(3,1fr)', lg: 'repeat(4,1fr)', }}>
                 {
                     state.slice(0, 12).map((item) => {
                         return <GridItem
