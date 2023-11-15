@@ -16,9 +16,9 @@ const Routers = () => {
             <Routes>
                 <Route element={<Layout />} >
                     <Route path='/' element={<App />} />
-                    <Route path='/page2' element={<Page2 />} />
+                    {/* <Route path='/page2' element={<Page2 />} /> */}
                     <Route path='/products/:id' element={<SinglePage />}/>
-                    <Route path='/page2/product/:id' element={<SinglePage2 />} />
+                    {/* <Route path='/page2/product/:id' element={<SinglePage2 />} /> */}
                     <Route path='/mycart' element={<Cart />} />
                 </Route>
             </Routes>

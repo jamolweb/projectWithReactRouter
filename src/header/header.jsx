@@ -25,6 +25,7 @@ export default () => {
 
     const { Product } = useContext(Products);
 
+
     return (
         <Box bg={'#f9f9f9'} h={'200px'} as="header" w={'100%'}>
             <Flex
@@ -60,7 +61,7 @@ export default () => {
                             <AiOutlineSearch fontSize={'20px'} />
                         </InputRightElement>
                     </InputGroup>
-                    <NavLink to={'/mycart'} style={{marginTop:'10px', color:'green', fontWeight:'900'}} >My Cart {Product.lentgh}</NavLink>
+                    <NavLink to={'/mycart'} style={{marginTop:'10px', color:'green', fontWeight:'900'}} >My Cart{Product.lentgh}</NavLink>
                 </Flex>
             </Flex>
             <Flex
@@ -73,9 +74,6 @@ export default () => {
                 <NavLink to={'/'} style={({isActive})=>{
                     return isActive ? {color:'blue', fontWeight:'900px', borderBottom:'2px solid blue'} : {}
                 }}>HOME</NavLink>
-                <NavLink to={'/page2'} style={({isActive})=>{
-                    return isActive ? {color:'blue', fontWeight:'900px', borderBottom:'2px solid blue'} : {}
-                }}>KATALOGS</NavLink>
             </Flex>
         </Box>
     )

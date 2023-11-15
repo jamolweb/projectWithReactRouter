@@ -13,26 +13,27 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Products } from "../../context/CartProducts"
 import { useContext } from "react"
+// import {data} from "./Data"
 
 const Katalog = () => {
 
     let [state, setState] = useState([])
 
-    const { Product, setProduct } = useContext(Products);
+    const  {addToLocalStorage}  = useContext(Products);
 
-    let toCart = (product) => {
-        setProduct([...Product, product])
-        setAdded('added to card')
-        // console.log(added);
+    let addToBasket = (product)=>{
+        addToLocalStorage(product)
     }
 
-    let [added , setAdded] = useState('+ add to cart');
+    // setState(data);
 
     useEffect(() => {
         axios
             .get('https://dummyjson.com/products')
             .then((res) => setState(res.data.products))
     }, []);
+
+    state.count = 1
     let navigate = useNavigate('')
     return (
         <Box mt={'50px'}>
@@ -50,7 +51,7 @@ const Katalog = () => {
                             <Image onClick={() => navigate(`/products/${item.id}`)} w={'100%'} objectFit={'cover'} borderRadius={'15px 15px 15px 15px'} h={'300px'} src={item.images[0]} />
                             <Text onClick={() => navigate(`/products/${item.id}`)}>{item.title}</Text>
                             <Text onClick={() => navigate(`/products/${item.id}`)}> $ {item.price}</Text>
-                                <Button colorScheme="facebook" onClick={() => toCart(item)}> + add to cart</Button>
+                                <Button colorScheme="facebook" onClick={() => addToBasket(item)}> + add to cart</Button>
                         </GridItem>
 
                     })
